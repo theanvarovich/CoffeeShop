@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antigravity Coffee | Premium Specialty Roast</title>
+    <meta name="description" content="Experience the weightless precision of Antigravity Coffee. Third-wave specialty coffee for the modern mind.">
+    
+    <!-- Design System -->
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            bg: '#0a0908',
+                            surface: '#1c1713',
+                            accent: '#d4a373',
+                            'accent-dark': '#b58955',
+                            text: '#f8f1e9',
+                            'text-muted': '#c9b8a8',
+                            vegan: '#4a7043',
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    borderRadius: { 'brand': '16px' }
+                },
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .bg-hero {
+                background-image: linear-gradient(to right, rgba(10, 9, 8, 0.9) 0%, rgba(10, 9, 8, 0.4) 50%, transparent 100%), url('assets/hero_home.png');
+                background-size: cover;
+                background-position: center;
+            }
+        }
+    </style>
+</head>
+<body class="bg-primary-bg text-primary-text font-sans scroll-smooth">
+
+    <!-- Navbar -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-primary-bg/80 backdrop-blur-xl border-b border-primary-surface/30">
+        <nav class="container mx-auto px-6 h-28 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-4 group">
+                <div class="w-10 h-10 rounded-full border-2 border-primary-accent flex items-center justify-center group-hover:rotate-[360deg] transition-transform duration-1000 ease-in-out">
+                    <div class="w-1.5 h-1.5 bg-primary-accent rounded-full animate-pulse"></div>
+                </div>
+                <span class="text-3xl font-serif font-bold tracking-tighter">Antigravity<span class="text-primary-accent">.</span></span>
+            </a>
+
+            <!-- Desktop Menu -->
+            <div class="hidden lg:flex items-center gap-10">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="menu.html" class="nav-link">Menu</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="locations.html" class="nav-link">Locations</a>
+                <a href="events-catering.html" class="nav-link">Events</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+
+            <!-- CTA / Cart -->
+            <div class="flex items-center gap-6">
+                <!-- Cart Trigger -->
+                <button id="cart-toggle" class="relative group p-2">
+                    <svg class="w-7 h-7 text-primary-text group-hover:text-primary-accent transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" stroke-width="1.5"/></svg>
+                    <span class="cart-count absolute -top-1 -right-1 w-5 h-5 bg-primary-accent text-primary-bg text-[10px] font-bold rounded-full flex items-center justify-center hidden">0</span>
+                </button>
+                <div class="hidden lg:block">
+                    <a href="#" class="order-online-btn btn-primary py-3 px-8 text-sm">Order Online</a>
+                </div>
+                <!-- Mobile Menu Toggle -->
+                <button id="menu-toggle" class="lg:hidden p-2 text-primary-text hover:text-primary-accent transition-all active:scale-95 border border-primary-accent/20 rounded-lg">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16" stroke-width="2"/></svg>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Full-Bleed Hero -->
+        <section class="min-h-screen flex items-center bg-hero pt-32 pb-40">
+            <div class="container mx-auto px-6">
+                <div class="max-w-4xl reveal">
+                    <div class="inline-flex items-center gap-3 px-4 py-2 rounded-full border border-primary-accent/30 bg-primary-accent/5 backdrop-blur-sm mb-8">
+                        <span class="w-2 h-2 bg-primary-accent rounded-full animate-ping"></span>
+                        <span class="text-primary-accent uppercase tracking-widest text-xs font-bold">Now Roasting: Ethiopia Guji Phase 2</span>
+                    </div>
+                    <h1 class="text-5xl md:text-9xl mb-8 leading-[0.85] italic">
+                        Defy Ordinary.<br>
+                        <span class="text-primary-accent">Elevate</span> Your Morning.
+                    </h1>
+                    <p class="text-xl md:text-2xl text-primary-text-muted mb-12 max-w-xl">
+                        Antigravity is a sensory-forward roastery dedicated to the architecture of flavor. Experience coffee in its purest, most weightless form.
+                    </p>
+                    <div class="flex flex-wrap gap-6">
+                        <a href="menu.html" class="btn-primary">Explore the Menu</a>
+                        <a href="about.html" class="btn-secondary">Our Story</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Highlight -->
+        <section class="py-32 bg-primary-bg overflow-hidden">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-10 reveal">
+                    <div>
+                        <h2 class="text-5xl md:text-6xl italic mb-6">The Selection</h2>
+                        <p class="text-primary-text-muted text-lg max-w-lg">Our roasters have selected these extractions for their exceptional clarity and body.</p>
+                    </div>
+                    <a href="menu.html" class="text-primary-accent font-medium border-b border-primary-accent/30 hover:border-primary-accent transition-all pb-1">View Full Menu &rarr;</a>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+                    <!-- Cortado -->
+                    <div class="glass-card group p-5 block transition-all hover:-translate-y-2 reveal">
+                        <a href="menu/signature-cortado.html" class="block aspect-square rounded-brand overflow-hidden mb-8">
+                            <img src="assets/signature_cortado.png" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        </a>
+                        <h3 class="text-3xl mb-2 italic">Signature Cortado</h3>
+                        <p class="text-primary-text-muted text-sm mb-6">Double shot / Precision micro-foam.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-primary-accent font-bold text-xl">$5.50</span>
+                            <button 
+                                data-add-to-cart 
+                                data-id="h-01" 
+                                data-name="Signature Cortado" 
+                                data-price="5.50" 
+                                data-image="assets/signature_cortado.png"
+                                class="w-10 h-10 rounded-full bg-primary-accent text-primary-bg flex items-center justify-center hover:bg-primary-accent-dark transition-colors shadow-lg shadow-primary-accent/20">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 4v16m8-8H4" stroke-width="2.5"/></svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Roast -->
+                    <div class="glass-card p-5 group hover:-translate-y-2 transition-all reveal" style="animation-delay: 0.1s">
+                        <div class="aspect-square rounded-brand overflow-hidden mb-8">
+                             <img src="assets/coffee_bag.png" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        </div>
+                        <h3 class="text-3xl mb-2 italic">House Selection</h3>
+                        <p class="text-primary-text-muted text-sm mb-6">Whole bean / Ethiopia Guji. 250g.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-primary-accent font-bold text-xl">$24.00</span>
+                            <button 
+                                data-add-to-cart 
+                                data-id="h-02" 
+                                data-name="House Selection" 
+                                data-price="24.00" 
+                                data-image="assets/coffee_bag.png"
+                                class="w-10 h-10 rounded-full bg-primary-accent text-primary-bg flex items-center justify-center hover:bg-primary-accent-dark transition-colors shadow-lg shadow-primary-accent/20">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 4v16m8-8H4" stroke-width="2.5"/></svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Nitrogen -->
+                    <div class="glass-card p-5 group hover:-translate-y-2 transition-all reveal" style="animation-delay: 0.2s">
+                        <div class="aspect-square rounded-brand overflow-hidden mb-8">
+                             <img src="assets/nitro_brew.png" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        </div>
+                        <h3 class="text-3xl mb-2 italic">Nitrogen Draft</h3>
+                        <p class="text-primary-text-muted text-sm mb-6">Slow-steeped / Creamy head.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-primary-accent font-bold text-xl">$7.00</span>
+                            <button 
+                                data-add-to-cart 
+                                data-id="h-03" 
+                                data-name="Nitrogen Draft" 
+                                data-price="7.00" 
+                                data-image="assets/nitro_brew.png"
+                                class="w-10 h-10 rounded-full bg-primary-accent text-primary-bg flex items-center justify-center hover:bg-primary-accent-dark transition-colors shadow-lg shadow-primary-accent/20">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 4v16m8-8H4" stroke-width="2.5"/></svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Matcha -->
+                    <div class="glass-card p-5 group hover:-translate-y-2 transition-all reveal" style="animation-delay: 0.3s">
+                        <div class="aspect-square rounded-brand overflow-hidden mb-8">
+                             <img src="assets/black_mug.png" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        </div>
+                        <h3 class="text-3xl mb-2 italic">Uji Matcha</h3>
+                        <p class="text-primary-text-muted text-sm mb-6">Ceremonial grade / Silky milk.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-primary-accent font-bold text-xl">$6.50</span>
+                            <button 
+                                data-add-to-cart 
+                                data-id="h-05" 
+                                data-name="Uji Matcha" 
+                                data-price="6.50" 
+                                data-image="assets/black_mug.png"
+                                class="w-10 h-10 rounded-full bg-primary-accent text-primary-bg flex items-center justify-center hover:bg-primary-accent-dark transition-colors shadow-lg shadow-primary-accent/20">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 4v16m8-8H4" stroke-width="2.5"/></svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Brand Teaser -->
+        <section class="py-40 bg-primary-surface overflow-hidden">
+            <div class="container mx-auto px-6">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
+                    <div class="reveal">
+                        <h2 class="text-5xl md:text-7xl italic mb-10 leading-tight">Beyond the Roast.<br>The Science of <span class="text-primary-accent underline decoration-primary-accent/10">Clarity.</span></h2>
+                        <p class="text-xl text-primary-text-muted leading-relaxed mb-12">
+                            Unlike traditional roasting, our Atmospheric Suspension technique ensures zero contact with hot metal surfaces. The result is a cup of unparalleled brightness, free from the smokiness of combustion.
+                        </p>
+                        <div class="flex flex-col gap-6">
+                            <div class="flex items-center gap-6">
+                                <div class="w-1.5 h-1.5 bg-primary-accent rounded-full"></div>
+                                <span class="text-lg font-medium">100% Traceable Direct Trade</span>
+                            </div>
+                            <div class="flex items-center gap-6">
+                                <div class="w-1.5 h-1.5 bg-primary-accent rounded-full"></div>
+                                <span class="text-lg font-medium">Carbon-Neutral Roasting Facility</span>
+                            </div>
+                            <div class="flex items-center gap-6">
+                                <div class="w-1.5 h-1.5 bg-primary-accent rounded-full"></div>
+                                <span class="text-lg font-medium">Precision Extraction Protocol</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative reveal" style="animation-delay: 0.2s">
+                        <img src="assets/coffee_roasting.png" class="rounded-[40px] shadow-2xl scale-105 border border-white/5">
+                        <div class="absolute -top-10 -right-10 w-64 h-64 bg-primary-accent/10 rounded-full blur-[100px] -z-10"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- New Arrivals / Variety -->
+        <section class="py-32 bg-primary-bg overflow-hidden">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-col items-center mb-20 reveal">
+                    <h2 class="text-5xl md:text-7xl italic mb-6">Seasonal <span class="text-primary-accent">Flow</span></h2>
+                    <p class="text-primary-text-muted text-lg text-center max-w-xl">Limited extractions and manual brewing methods available this month.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+                    <div class="glass-card flex flex-col md:flex-row gap-8 p-8 transition-all hover:translate-x-2 reveal">
+                        <div class="w-full md:w-1/2 aspect-[4/3] rounded-brand overflow-hidden">
+                            <img src="assets/signature_cortado.png" class="w-full h-full object-cover">
+                        </div>
+                        <div class="flex flex-col justify-center">
+                            <h3 class="text-4xl italic mb-4">V60 Pour Over</h3>
+                            <p class="text-primary-text-muted mb-8 leading-relaxed">The ultimate clarity. Highlighting notes of jasmine and honey from our Kenyan light roast.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-2xl font-serif text-primary-accent">$8.00</span>
+                                <button data-add-to-cart data-id="h-06" data-name="V60 Pour Over" data-price="8.00" data-image="assets/signature_cortado.png" class="btn-secondary py-2 px-6 text-sm">Add to Order</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="glass-card flex flex-col md:flex-row gap-8 p-8 transition-all hover:-translate-x-2 reveal" style="animation-delay: 0.2s">
+                        <div class="w-full md:w-1/2 aspect-[4/3] rounded-brand overflow-hidden">
+                            <img src="assets/nitro_brew.png" class="w-full h-full object-cover">
+                        </div>
+                        <div class="flex flex-col justify-center">
+                            <h3 class="text-4xl italic mb-4">Cold Press Concentrate</h3>
+                            <p class="text-primary-text-muted mb-8 leading-relaxed">Steeped for 18 hours. A heavy-bodied chocolate profile perfect for over ice.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-2xl font-serif text-primary-accent">$6.00</span>
+                                <button data-add-to-cart data-id="h-07" data-name="Cold Press" data-price="6.00" data-image="assets/nitro_brew.png" class="btn-secondary py-2 px-6 text-sm">Add to Order</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Premium Footer -->
+    <footer class="bg-primary-bg pt-32 pb-12 border-t border-primary-surface/30">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-16 mb-24">
+                <!-- Brand Column -->
+                <div class="md:col-span-5 reveal">
+                    <a href="index.html" class="flex items-center gap-3 mb-10">
+                        <div class="w-8 h-8 rounded-full border-2 border-primary-accent flex items-center justify-center">
+                            <div class="w-1 h-1 bg-primary-accent rounded-full"></div>
+                        </div>
+                        <span class="text-3xl font-serif font-bold tracking-tighter text-primary-text">Antigravity<span class="text-primary-accent">.</span></span>
+                    </a>
+                    <p class="text-xl text-primary-text-muted leading-relaxed mb-12 max-w-sm">
+                        Crafting weightless coffee experiences through precision roasting and intentional atmosphere since 2026.
+                    </p>
+                    <div class="flex gap-6 items-center">
+                        <a href="#" class="text-primary-text-muted hover:text-primary-accent transition-all hover:scale-110">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c.796 0 1.441.645 1.441 1.44s-.645 1.44-1.441 1.44c-.795 0-1.439-.645-1.439-1.44s.644-1.44 1.439-1.44z"/></svg>
+                        </a>                       
+                    </div>
+                </div>
+
+                <!-- Navigation -->
+                <div class="md:col-span-2 reveal" style="animation-delay: 0.1s">
+                    <h4 class="footer-heading">Inhabit</h4>
+                    <a href="index.html" class="footer-link">Home</a>
+                    <a href="menu.html" class="footer-link">The Menu</a>
+                    <a href="about.html" class="footer-link">About Us</a>
+                    <a href="locations.html" class="footer-link">Locations</a>
+                    <a href="events-catering.html" class="footer-link">Private Events</a>
+                    <a href="contact.html" class="footer-link">Contact</a>
+                </div>
+
+                <!-- HQ -->
+                <div class="md:col-span-2 reveal" style="animation-delay: 0.2s">
+                    <h4 class="footer-heading">HQ Territory</h4>
+                    <p class="text-primary-text-muted text-sm leading-loose mb-6">
+                        124 Gravity Way,<br>
+                        Arts District,<br>
+                        San Francisco, CA
+                    </p>
+                    <a href="mailto:concierge@antigravity.com" class="footer-link lowercase">concierge@antigravity.com</a>
+                </div>
+
+                <!-- Newsletter -->
+                <div class="md:col-span-3 reveal" style="animation-delay: 0.3s">
+                    <h4 class="footer-heading">Newsletter</h4>
+                    <p class="text-sm text-primary-text-muted mb-8 leading-relaxed">Join our orbit for roast alerts and brewing guides.</p>
+                    <div class="space-y-4">
+                        <div class="relative group">
+                            <input type="email" placeholder="Your Email" class="w-full bg-primary-surface/50 backdrop-blur-md border border-white/10 rounded-2xl p-5 outline-none focus:border-primary-accent transition-all text-sm group-hover:bg-primary-surface">
+                            <div class="absolute inset-0 rounded-2xl border border-primary-accent/0 group-hover:border-primary-accent/20 transition-all pointer-events-none"></div>
+                        </div>
+                        <button class="w-full btn-primary py-5 text-sm uppercase tracking-widest font-bold shadow-xl shadow-primary-accent/10 hover:shadow-primary-accent/20 transition-all">Subscribe Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8 reveal">
+                <p class="text-[10px] uppercase tracking-[0.2em] text-primary-text-muted/40 font-bold">© 2026 Antigravity Coffee. All Rights Reserved.</p>
+                <div class="flex gap-10 text-[10px] uppercase tracking-[0.2em] text-primary-text-muted/40 font-bold">
+                    <a href="#" class="hover:text-primary-accent transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-primary-accent transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 bg-primary-bg/98 z-[100] hidden flex-col items-center justify-center gap-10 text-4xl font-serif">
+        <button id="close-menu" class="absolute top-10 right-10 text-primary-text p-2 hover:rotate-90 transition-transform">
+            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M6 18L18 6M6 6l12 12" stroke-width="1.5"/></svg>
+        </button>
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="menu.html" class="nav-link">The Menu</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="locations.html" class="nav-link">Locations</a>
+        <a href="events-catering.html" class="nav-link">Events</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/cart.js"></script>
+    <script src="js/animations.js"></script>
+</body>
+</html>

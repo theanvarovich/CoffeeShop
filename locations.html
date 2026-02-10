@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Locations | Antigravity Coffee</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            bg: '#0a0908',
+                            surface: '#1c1713',
+                            accent: '#d4a373',
+                            'accent-dark': '#b58955',
+                            text: '#f8f1e9',
+                            'text-muted': '#c9b8a8',
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                },
+            }
+        }
+    </script>
+</head>
+<body class="bg-primary-bg text-primary-text font-sans overflow-x-hidden">
+
+    <header class="fixed top-0 left-0 right-0 z-50 bg-primary-bg/80 backdrop-blur-xl border-b border-primary-surface/30">
+        <nav class="container mx-auto px-6 h-28 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-4 group">
+                <div class="w-10 h-10 rounded-full border-2 border-primary-accent flex items-center justify-center group-hover:rotate-[360deg] transition-transform duration-1000 ease-in-out">
+                    <div class="w-1.5 h-1.5 bg-primary-accent rounded-full animate-pulse"></div>
+                </div>
+                <span class="text-3xl font-serif font-bold tracking-tighter">Antigravity<span class="text-primary-accent">.</span></span>
+            </a>
+            
+            <div class="hidden lg:flex items-center gap-10">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="menu.html" class="nav-link">Menu</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="locations.html" class="nav-link active">Locations</a>
+                <a href="events-catering.html" class="nav-link">Events</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+            
+            <div class="flex items-center gap-6">
+                <!-- Cart Trigger -->
+                <button id="cart-toggle" class="relative group p-2">
+                    <svg class="w-7 h-7 text-primary-text group-hover:text-primary-accent transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" stroke-width="1.5"/></svg>
+                    <span class="cart-count absolute -top-1 -right-1 w-5 h-5 bg-primary-accent text-primary-bg text-[10px] font-bold rounded-full flex items-center justify-center hidden">0</span>
+                </button>
+                <div class="hidden lg:block">
+                    <a href="#" class="order-online-btn btn-primary py-3 px-8 text-sm">Order Online</a>
+                </div>
+                <!-- Mobile Menu Toggle -->
+                <button id="menu-toggle" class="lg:hidden p-2 text-primary-text hover:text-primary-accent transition-all active:scale-95 border border-primary-accent/20 rounded-lg">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16" stroke-width="2"/></svg>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="pt-40 pb-24">
+        <div class="container mx-auto px-6">
+            <h1 class="text-5xl md:text-8xl italic mb-20 reveal">The <span class="text-primary-accent underline decoration-primary-accent/10">Territories.</span></h1>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-24 mb-32">
+                <!-- Location 1 -->
+                <div class="reveal">
+                    <div class="rounded-[32px] overflow-hidden aspect-video mb-8 shadow-2xl group">
+                        <img src="assets/hero_home.png" alt="Observatory" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    </div>
+                    <div class="flex flex-col md:flex-row justify-between items-start gap-8">
+                        <div>
+                            <h2 class="text-4xl italic mb-4">The Observatory</h2>
+                            <p class="text-primary-text-muted text-lg leading-relaxed max-w-sm">
+                                Located at the heart of the Arts District, our flagship space is designed for sensory immersion.
+                            </p>
+                            <p class="mt-6 text-primary-text-muted text-sm font-medium">124 Gravity Way, San Francisco, CA 94103</p>
+                        </div>
+                        <div class="text-primary-text-muted text-right">
+                             <h4 class="text-xs uppercase font-bold tracking-widest text-primary-text mb-6">Engagement Phase</h4>
+                             <p class="text-sm mb-2">Mon — Fri: 07:00 — 20:00</p>
+                             <p class="text-sm">Sat — Sun: 08:30 — 21:00</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Location 2 -->
+                <div class="reveal" style="animation-delay: 0.1s">
+                    <div class="rounded-[32px] overflow-hidden aspect-video mb-8 shadow-2xl group">
+                        <img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?q=80&w=1000&auto=format&fit=crop" alt="Eclipse Transit" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    </div>
+                    <div class="flex flex-col md:flex-row justify-between items-start gap-8">
+                        <div>
+                            <h2 class="text-4xl italic mb-4">Eclipse Transit</h2>
+                            <p class="text-primary-text-muted text-lg leading-relaxed max-w-sm">
+                                A high-velocity extraction bar located in Zenith Plaza. Designed for the nomadic mind.
+                            </p>
+                            <p class="mt-6 text-primary-text-muted text-sm font-medium">Suite 404, Zenith Plaza, San Francisco, CA 94107</p>
+                        </div>
+                        <div class="text-primary-text-muted text-right">
+                             <h4 class="text-xs uppercase font-bold tracking-widest text-primary-text mb-6">Engagement Phase</h4>
+                             <p class="text-sm mb-2">Mon — Sat: 06:00 — 18:00</p>
+                             <p class="text-sm">Sun: Closed</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Premium Footer -->
+    <footer class="bg-primary-bg pt-32 pb-12 border-t border-primary-surface/30">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-16 mb-24">
+                <!-- Brand Column -->
+                <div class="md:col-span-12 lg:col-span-5 reveal">
+                    <a href="index.html" class="flex items-center gap-4 mb-10">
+                        <div class="w-10 h-10 rounded-full border-2 border-primary-accent flex items-center justify-center">
+                            <div class="w-1.5 h-1.5 bg-primary-accent rounded-full animate-pulse"></div>
+                        </div>
+                        <span class="text-3xl font-serif font-bold tracking-tighter text-primary-text">Antigravity<span class="text-primary-accent">.</span></span>
+                    </a>
+                    <p class="text-xl text-primary-text-muted leading-relaxed mb-12 max-w-sm">
+                        Crafting weightless coffee experiences through precision roasting and intentional atmosphere since 2026.
+                    </p>
+                    <div class="flex gap-6 items-center">
+                        <a href="#" class="text-primary-text-muted hover:text-primary-accent transition-all hover:scale-110">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c.796 0 1.441.645 1.441 1.44s-.645 1.44-1.441 1.44c-.795 0-1.439-.645-1.439-1.44s.644-1.44 1.439-1.44z"/></svg>
+                        </a>
+                        <a href="#" class="text-primary-text-muted hover:text-primary-accent transition-all hover:scale-110">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12.525.023c1.71 0 3.418.01 5.127.02 0 1.954.004 3.91.006 5.865-1.161-.002-2.321.002-3.483-.004-.707.01-1.2.227-1.438.932-.057.262-.031.543-.043.816.002.77.001 1.54.001 2.311h4.942c-.08 1.144-.223 2.285-.357 3.425-.015.11-.115.166-.2.164h-4.381c-.004 4.148-.002 8.297-.006 12.446-2.131.004-4.263.003-6.394.006.002-4.153.001-8.307.001-12.46h-3.085c.002-1.127-.002-2.254.001-3.382h3.084c-.002-.857.003-1.713-.003-2.57.015-1.579.52-2.924 1.758-3.958a5.535 5.535 0 012.87-1.101z"/></svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="md:col-span-4 lg:col-span-2 reveal" style="animation-delay: 0.1s">
+                    <h4 class="footer-heading">Inhabit</h4>
+                    <a href="index.html" class="footer-link">Home</a>
+                    <a href="menu.html" class="footer-link">The Menu</a>
+                    <a href="about.html" class="footer-link">About Us</a>
+                    <a href="locations.html" class="footer-link active">Locations</a>
+                    <a href="contact.html" class="footer-link">Contact</a>
+                </div>
+                <div class="md:col-span-8 lg:col-span-5 reveal" style="animation-delay: 0.2s">
+                    <h4 class="footer-heading">Newsletter</h4>
+                    <div class="space-y-4">
+                        <input type="email" placeholder="Your Email" class="w-full bg-primary-surface border border-white/5 rounded-2xl p-5 outline-none focus:border-primary-accent transition-all text-sm">
+                        <button class="w-full btn-primary py-5 text-sm uppercase tracking-widest font-bold">Subscribe Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 bg-primary-bg/98 z-[100] hidden flex-col items-center justify-center gap-10 text-4xl font-serif">
+        <button id="close-menu" class="absolute top-10 right-10 text-primary-text p-2 hover:rotate-90 transition-transform">
+            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M6 18L18 6M6 6l12 12" stroke-width="1.5"/></svg>
+        </button>
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="menu.html" class="nav-link">The Menu</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="locations.html" class="nav-link active">Locations</a>
+        <a href="events-catering.html" class="nav-link">Events</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/cart.js"></script>
+    <script src="js/animations.js"></script>
+</body>
+</html>
